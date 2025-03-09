@@ -1,18 +1,18 @@
 -- scenes/pause.lua
 local Input_Manager = require("src.input_manager")
 
-local scene = {}
+local Scene = {}
 
 
-function scene.load()
-
-end
-
-function scene.update(dt)
+function Scene.load()
 
 end
 
-function scene.draw()
+function Scene.update(dt)
+
 end
 
-return scene
+function Scene.draw()
+end
+
+return Scene

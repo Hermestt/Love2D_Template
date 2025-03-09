@@ -5,18 +5,18 @@ local Input_Manager = require "src.input_manager"
 
 -- Scene requires
 local Scene_Manager = require('src.scene_manager')
-local menu = require("scenes.scene_menu")
-local game = require("scenes.game")
-local pause = require("scenes.pause")
+local scene_menu = require("src.scenes.scene_menu")
+local scene_game = require("src.scenes.scene_game")
+local scene_pause = require("src.scenes.scene_pause")
 
 -- LOAD
 function love.load()
     love.window.setTitle("NAME OF THE GAME")
     love.graphics.setBackgroundColor(0, 0, 0.11, 1)
     love.window.setMode(1024, 768, { resizable = false, vsync = false, minwidth = 400, minheight = 300, highdpi = true })
-    Scene_Manager.register("menu", menu)
-    Scene_Manager.register("game", game)
-    Scene_Manager.register("pause", pause)
+    Scene_Manager.register("menu", scene_menu)
+    Scene_Manager.register("game", scene_game)
+    Scene_Manager.register("pause", scene_pause)
     Scene_Manager.switch("menu")
 end
 

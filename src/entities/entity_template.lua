@@ -1,9 +1,9 @@
--- entity/box.lua
+-- entity_template.lua
 
 -- requires
 
 return function(x_pos, y_pos, id)
-    local entity = {
+    local Entity = {
         id = id,
         type = "",
         x = x_pos,
@@ -12,16 +12,16 @@ return function(x_pos, y_pos, id)
         -- sprite = love.graphics.newImage("assets/sprites/box.png")
     }
 
-    entity.draw = function()
+    Entity.draw = function()
 
     end
 
 
 
-    entity.update = function(dt)
+    Entity.update = function(dt)
 
     end
 
 
-    return entity
+    return Entity
 end

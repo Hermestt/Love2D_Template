@@ -1,30 +1,30 @@
 -- menu.lua
 local Input_Manager = require("src.input_manager")
-local scene = {}
-local menus = {}
+local Scene = {}
+local menu_options = {}
 
-function scene.load()
+function Scene.load()
     Input_Manager.paused = false
 
-    menus = {}
+    menu_options = {}
 end
 
-function scene.update(dt)
+function Scene.update(dt)
     if Input_Manager.escape == true then
         love.event.quit()
     end
 end
 
-function scene.draw()
+function Scene.draw()
 
 end
 
-function scene.keypressed(pressed_key)
+function Scene.keypressed(pressed_key)
     Input_Manager.press(pressed_key)
 end
 
-function scene.keyreleased(released_key)
+function Scene.keyreleased(released_key)
     Input_Manager.release(released_key)
 end
 
-return scene
+return Scene

@@ -1,4 +1,4 @@
--- fonts.lua
+-- fonts_manager.lua
 
 local fonts = {}
 
